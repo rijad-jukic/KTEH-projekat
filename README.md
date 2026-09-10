@@ -41,10 +41,12 @@ npm run preview
 
 _Ova sekcija se dopunjava kroz faze razvoja projekta._
 
+- Navigacija kroz aplikaciju pomoću `react-router-dom` (Navbar sa isticanjem aktivne rute, ruta sa parametrom za detalje ljubimca, 404 stranica)
+
 ## Status razvoja
 
 - [x] Faza 1 — Inicijalizacija projekta
-- [ ] Faza 2 — Layout i routing
+- [x] Faza 2 — Layout i routing
 - [ ] Faza 3 — Modeli, interfejsi i mock podaci
 - [ ] Faza 4 — Galerija sa filterima i paginacijom
 - [ ] Faza 5 — Detaljna stranica ljubimca
