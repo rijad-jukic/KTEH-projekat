@@ -47,7 +47,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 
 - [x] Faza 1 — Inicijalizacija projekta
 - [x] Faza 2 — Layout i routing
-- [ ] Faza 3 — Modeli, interfejsi i mock podaci
+- [x] Faza 3 — Modeli, interfejsi i mock podaci
 - [ ] Faza 4 — Galerija sa filterima i paginacijom
 - [ ] Faza 5 — Detaljna stranica ljubimca
 - [ ] Faza 6 — Forma za usvajanje i potvrda
