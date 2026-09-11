@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import PetCard from '../components/PetCard'
 import Pagination from '../components/Pagination'
 import { mockPets } from '../data/pets'
+import { useFavorites } from '../hooks/useFavorites'
 import { PetCatalog } from '../models/PetCatalog'
 import type { PetGender, PetSize, PetSpecies } from '../types/Pet'
 
@@ -9,9 +10,11 @@ const PAGE_SIZE = 6
 const catalog = new PetCatalog(mockPets)
 
 function GalleryPage() {
+  const { isFavorite } = useFavorites()
   const [species, setSpecies] = useState<PetSpecies | 'sve'>('sve')
   const [size, setSize] = useState<PetSize | 'sve'>('sve')
   const [gender, setGender] = useState<PetGender | 'sve'>('sve')
+  const [onlyFavorites, setOnlyFavorites] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
 
   const filteredPets = useMemo(
@@ -24,12 +27,16 @@ function GalleryPage() {
     [species, size, gender],
   )
 
+  const visiblePets = onlyFavorites
+    ? filteredPets.filter((pet) => isFavorite(pet.id))
+    : filteredPets
+
   useEffect(() => {
     setCurrentPage(1)
-  }, [species, size, gender])
+  }, [species, size, gender, onlyFavorites])
 
-  const totalPages = Math.max(1, Math.ceil(filteredPets.length / PAGE_SIZE))
-  const petsOnPage = catalog.paginate(filteredPets, currentPage, PAGE_SIZE)
+  const totalPages = Math.max(1, Math.ceil(visiblePets.length / PAGE_SIZE))
+  const petsOnPage = catalog.paginate(visiblePets, currentPage, PAGE_SIZE)
 
   return (
     <div className="container py-4">
@@ -84,7 +91,20 @@ function GalleryPage() {
         </div>
       </div>
 
-      {filteredPets.length === 0 ? (
+      <div className="form-check mb-4">
+        <input
+          type="checkbox"
+          className="form-check-input"
+          id="filter-omiljeni"
+          checked={onlyFavorites}
+          onChange={(event) => setOnlyFavorites(event.target.checked)}
+        />
+        <label className="form-check-label" htmlFor="filter-omiljeni">
+          Prikaži samo omiljene ♥
+        </label>
+      </div>
+
+      {visiblePets.length === 0 ? (
         <p className="text-secondary">Nema ljubimaca koji odgovaraju izabranim filterima.</p>
       ) : (
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mb-4">

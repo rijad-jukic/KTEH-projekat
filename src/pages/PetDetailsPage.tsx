@@ -2,6 +2,7 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import FormField from '../components/FormField'
 import Modal from '../components/Modal'
+import { useFavorites } from '../hooks/useFavorites'
 import { mockPets } from '../data/pets'
 import { AdoptionRequestStore } from '../models/AdoptionRequestStore'
 import { PetCatalog } from '../models/PetCatalog'
@@ -38,6 +39,7 @@ function PetDetailsPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const pet = id ? catalog.getById(Number(id)) : undefined
+  const { isFavorite, toggleFavorite } = useFavorites()
 
   const [values, setValues] = useState<FormValues>(initialValues)
   const [errors, setErrors] = useState<Partial<FormValues>>({})
@@ -105,7 +107,22 @@ function PetDetailsPage() {
         <div className="col-md-6">
           <div className="card h-100">
             <div className="card-body">
-              <h1 className="card-title mb-4">{pet.name}</h1>
+              <div className="d-flex justify-content-between align-items-start mb-4">
+                <h1 className="card-title mb-0">{pet.name}</h1>
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary rounded-circle"
+                  onClick={() => toggleFavorite(pet.id)}
+                  aria-pressed={isFavorite(pet.id)}
+                  aria-label={
+                    isFavorite(pet.id)
+                      ? `Ukloni ${pet.name} iz omiljenih`
+                      : `Dodaj ${pet.name} u omiljene`
+                  }
+                >
+                  {isFavorite(pet.id) ? '♥' : '♡'}
+                </button>
+              </div>
               <ul className="list-unstyled fs-5 mb-4">
                 <li>
                   <strong>Rasa:</strong> {pet.breed}
