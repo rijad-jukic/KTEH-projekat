@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import GalleryPage from './pages/GalleryPage'
 import PetDetailsPage from './pages/PetDetailsPage'
-import AdoptionRequestPage from './pages/AdoptionRequestPage'
 import AboutPage from './pages/AboutPage'
 import NotFoundPage from './pages/NotFoundPage'
 
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/ljubimci" element={<GalleryPage />} />
           <Route path="/ljubimci/:id" element={<PetDetailsPage />} />
-          <Route path="/ljubimci/:id/usvoji" element={<AdoptionRequestPage />} />
           <Route path="/o-nama" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
