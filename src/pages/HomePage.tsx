@@ -13,7 +13,7 @@ function HomePage() {
           Pregledaj ljubimce koji čekaju usvajanje, filtriraj ih po vrsti,
           veličini i polu, i pošalji upit za onog koji ti legne za oko.
         </p>
-        <Link to="/ljubimci" className="btn btn-primary btn-lg mt-3">
+        <Link to="/ljubimci" className="btn btn-primary btn-lg rounded-pill mt-3">
           Pogledaj galeriju ljubimaca
         </Link>
       </div>

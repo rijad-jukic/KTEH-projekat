@@ -1,0 +1,22 @@
+// Bootstrap dozvoljava pristup color funkcijama pre nego što se
+// definišu override-i promenljivih.
+@import 'bootstrap/scss/functions';
+
+// Brend paleta ("UsvojiMe"): tamno zelena, narandžasta, krem, bela.
+$brand-green: #0e6749;
+$brand-orange: #fe7618;
+$brand-cream: #f8ede1;
+
+$primary: $brand-orange;
+$dark: $brand-green;
+$body-bg: $brand-cream;
+$body-color: #222222;
+
+// Mekši, zaobljeniji izgled komponenti (kartice, dugmad, polja) u skladu
+// sa Figma dizajnom.
+$border-radius: 0.75rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1rem;
+$input-border-radius: 0.6rem;
+
+@import 'bootstrap/scss/bootstrap';

@@ -28,8 +28,8 @@ function PetCard({ pet }: PetCardProps) {
           <p className="card-text text-secondary small mb-3">
             {pet.ageYears} god. · {pet.location}
           </p>
-          <Link to={`/ljubimci/${pet.id}`} className="btn btn-outline-success mt-auto">
-            Vidi profil
+          <Link to={`/ljubimci/${pet.id}`} className="btn btn-primary rounded-pill mt-auto">
+            Usvoji me
           </Link>
         </div>
       </div>

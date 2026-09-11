@@ -9,7 +9,7 @@ Korisnici mogu da pregledaju listu ljubimaca dostupnih za usvajanje, filtriraju 
 - React 19 + TypeScript
 - Vite
 - React Router (react-router-dom)
-- Bootstrap 5
+- Bootstrap 5 (prilagođen preko Sass promenljivih — vidi `src/styles/theme.scss`)
 - TheDogAPI / TheCatAPI (eksterni podaci o rasama)
 
 ## Pokretanje projekta lokalno
@@ -43,6 +43,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 
 - Navigacija kroz aplikaciju pomoću `react-router-dom` (Navbar sa isticanjem aktivne rute, ruta sa parametrom za detalje ljubimca, 404 stranica)
 - Galerija ljubimaca sa filterima po vrsti, veličini i polu, i paginacijom rezultata
+- Brend tema ("UsvojiMe") u tamno zelenoj, narandžastoj i krem boji, primenjena preko Bootstrap Sass promenljivih
 
 ## Status razvoja
 

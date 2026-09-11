@@ -10,7 +10,7 @@ function PetDetailsPage() {
         Ovde će se prikazivati svi podaci o odabranom ljubimcu
         (implementira se u Fazi 5).
       </p>
-      <Link to={`/ljubimci/${id}/usvoji`} className="btn btn-success">
+      <Link to={`/ljubimci/${id}/usvoji`} className="btn btn-primary rounded-pill">
         Pošalji upit za usvajanje
       </Link>
     </div>
