@@ -47,6 +47,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Detaljna stranica ljubimca sa svim podacima (rasa, pol, godine, veličina, lokacija, opis) i automatskim preusmeravanjem na galeriju ako traženi ljubimac ne postoji
 - Forma za upit za usvajanje sa validacijom (ime, email, poruka), čuvanjem upita u localStorage i modalom potvrde uspešnog slanja
 - Omiljeni ljubimci (globalno stanje preko Context API-ja) — dodavanje/uklanjanje na kartici i stranici detalja, filter "samo omiljeni" u galeriji, brojač u navigaciji, sve sa čuvanjem u localStorage
+- Navigacija sa logom brenda, dugmetom "Usvoji Ljubimca" koje vodi do pregleda ljubimaca na Početnoj stranici (glatko skrolovanje na ciljanu sekciju)
 
 ## Status razvoja
 

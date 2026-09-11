@@ -18,11 +18,13 @@ function HomePage() {
         </Link>
       </div>
 
-      <h2 className="h4 mb-3">Neki od ljubimaca</h2>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-        {featuredPets.map((pet) => (
-          <PetCard key={pet.id} pet={pet} />
-        ))}
+      <div id="neki-od-ljubimaca" style={{ scrollMarginTop: '90px' }}>
+        <h2 className="h4 mb-3">Neki od ljubimaca</h2>
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          {featuredPets.map((pet) => (
+            <PetCard key={pet.id} pet={pet} />
+          ))}
+        </div>
       </div>
     </div>
   )

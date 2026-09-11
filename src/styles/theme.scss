@@ -19,4 +19,9 @@ $border-radius-sm: 0.5rem;
 $border-radius-lg: 1rem;
 $input-border-radius: 0.6rem;
 
+// Beli navbar sa crnim tekstom (umesto podrazumevanog tamnog navbara).
+$navbar-light-color: #000;
+$navbar-light-hover-color: $brand-orange;
+$navbar-light-active-color: $brand-green;
+
 @import 'bootstrap/scss/bootstrap';

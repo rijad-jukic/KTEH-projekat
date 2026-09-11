@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { FavoritesProvider } from './context/FavoritesContext'
+import { useScrollToHash } from './hooks/useScrollToHash'
 import HomePage from './pages/HomePage'
 import GalleryPage from './pages/GalleryPage'
 import PetDetailsPage from './pages/PetDetailsPage'
@@ -9,6 +10,8 @@ import AboutPage from './pages/AboutPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
+  useScrollToHash()
+
   return (
     <FavoritesProvider>
       <div className="d-flex flex-column min-vh-100">
