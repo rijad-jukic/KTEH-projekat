@@ -45,6 +45,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Galerija ljubimaca sa filterima po vrsti, veličini i polu, i paginacijom rezultata
 - Brend tema ("UsvojiMe") u tamno zelenoj, narandžastoj i krem boji, primenjena preko Bootstrap Sass promenljivih
 - Detaljna stranica ljubimca sa svim podacima (rasa, pol, godine, veličina, lokacija, opis) i automatskim preusmeravanjem na galeriju ako traženi ljubimac ne postoji
+- Forma za upit za usvajanje sa validacijom (ime, email, poruka), čuvanjem upita u localStorage i modalom potvrde uspešnog slanja
 
 ## Status razvoja
 
@@ -53,7 +54,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - [x] Faza 3 — Modeli, interfejsi i mock podaci
 - [x] Faza 4 — Galerija sa filterima i paginacijom
 - [x] Faza 5 — Detaljna stranica ljubimca
-- [ ] Faza 6 — Forma za usvajanje i potvrda
+- [x] Faza 6 — Forma za usvajanje i potvrda
 - [ ] Faza 7 — Global state (Context API)
 - [ ] Faza 8 — Eksterni API-ji
 - [ ] Faza 9 — Dodatne stranice i funkcionalnosti
