@@ -2,7 +2,7 @@ function Footer() {
   const godina = new Date().getFullYear()
 
   return (
-    <footer className="bg-dark text-light-emphasis mt-auto py-4">
+    <footer className="bg-dark text-white mt-auto py-4">
       <div className="container text-center small">
         <p className="mb-1">
           © {godina} Usvoji ljubimca 
