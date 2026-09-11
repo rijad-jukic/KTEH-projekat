@@ -6,8 +6,12 @@ import { useFavorites } from '../hooks/useFavorites'
 import { mockPets } from '../data/pets'
 import { AdoptionRequestStore } from '../models/AdoptionRequestStore'
 import { PetCatalog } from '../models/PetCatalog'
+import { fetchBreedInfo, MissingApiKeyError } from '../services/breedApi'
 import type { AdoptionRequest } from '../types/AdoptionRequest'
+import type { BreedInfo } from '../types/BreedInfo'
 import type { PetGender, PetSize } from '../types/Pet'
+
+type BreedInfoStatus = 'loading' | 'done' | 'error' | 'missing-key'
 
 const catalog = new PetCatalog(mockPets)
 const requestStore = new AdoptionRequestStore()
@@ -45,11 +49,37 @@ function PetDetailsPage() {
   const [errors, setErrors] = useState<Partial<FormValues>>({})
   const [showConfirmation, setShowConfirmation] = useState(false)
 
+  const [breedInfo, setBreedInfo] = useState<BreedInfo | null>(null)
+  const [breedInfoStatus, setBreedInfoStatus] = useState<BreedInfoStatus>('loading')
+
   useEffect(() => {
     if (!pet) {
       navigate('/ljubimci', { replace: true })
     }
   }, [pet, navigate])
+
+  useEffect(() => {
+    if (!pet) return
+
+    let cancelled = false
+    setBreedInfoStatus('loading')
+    setBreedInfo(null)
+
+    fetchBreedInfo(pet)
+      .then((info) => {
+        if (cancelled) return
+        setBreedInfo(info)
+        setBreedInfoStatus('done')
+      })
+      .catch((error: unknown) => {
+        if (cancelled) return
+        setBreedInfoStatus(error instanceof MissingApiKeyError ? 'missing-key' : 'error')
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [pet])
 
   if (!pet) {
     return null
@@ -144,6 +174,54 @@ function PetDetailsPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="col-lg-8 mx-auto mb-5">
+        <h2 className="h4 mb-3">O rasi: {pet.breed}</h2>
+        {breedInfoStatus === 'loading' && (
+          <p className="text-secondary">Učitavanje podataka o rasi...</p>
+        )}
+        {breedInfoStatus === 'missing-key' && (
+          <p className="text-secondary">
+            Podaci o rasi zahtevaju API ključ — vidi uputstvo u README-u (`.env.example`).
+          </p>
+        )}
+        {breedInfoStatus === 'error' && (
+          <p className="text-secondary">
+            Trenutno nije moguće učitati dodatne podatke o rasi sa spoljnog servisa.
+          </p>
+        )}
+        {breedInfoStatus === 'done' && !breedInfo && (
+          <p className="text-secondary">
+            Nema dodatnih podataka o ovoj rasi u spoljnoj bazi.
+          </p>
+        )}
+        {breedInfoStatus === 'done' && breedInfo && (
+          <div className="row g-3 align-items-center">
+            {breedInfo.referenceImageUrl && (
+              <div className="col-sm-4">
+                <img
+                  src={breedInfo.referenceImageUrl}
+                  alt={breedInfo.name}
+                  className="img-fluid rounded-4"
+                />
+              </div>
+            )}
+            <div className="col-sm-8">
+              <p className="mb-1">
+                <strong>Temperament:</strong> {breedInfo.temperament ?? 'Nepoznato'}
+              </p>
+              <p className="mb-1">
+                <strong>Životni vek:</strong> {breedInfo.lifeSpan ?? 'Nepoznato'} godina
+              </p>
+              {breedInfo.origin && (
+                <p className="mb-0">
+                  <strong>Poreklo:</strong> {breedInfo.origin}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="col-lg-8 mx-auto mb-5">

@@ -13,4 +13,6 @@ export interface Pet {
   location: string
   description: string
   imageUrl: string
+  /** Naziv rase na engleskom, koristi se za pretragu na TheDogAPI/TheCatAPI. */
+  breedApiQuery: string
 }

@@ -30,6 +30,23 @@ npm run dev
 
 Aplikacija će biti dostupna na adresi koju ispiše terminal (podrazumevano `http://localhost:5173`).
 
+### API ključevi (opciono)
+
+Stranica ljubimca prikazuje dodatne podatke o rasi (temperament, životni vek, poreklo)
+preuzete sa [TheDogAPI](https://thedogapi.com/) i [TheCatAPI](https://thecatapi.com/).
+Ovi servisi zahtevaju besplatan API ključ (trenutna registracija, bez kartice):
+
+1. Napravi `.env.local` fajl u korenu projekta (na osnovu `.env.example`).
+2. Registruj se na https://thedogapi.com/ i https://thecatapi.com/ i upiši dobijene ključeve:
+
+```
+VITE_DOG_API_KEY=tvoj_kljuc
+VITE_CAT_API_KEY=tvoj_kljuc
+```
+
+Bez ključeva aplikacija i dalje radi normalno — sekcija "O rasi" samo prikazuje
+napomenu da ključ nedostaje, umesto podataka.
+
 Za produkcioni build:
 
 ```bash
@@ -48,6 +65,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Forma za upit za usvajanje sa validacijom (ime, email, poruka), čuvanjem upita u localStorage i modalom potvrde uspešnog slanja
 - Omiljeni ljubimci (globalno stanje preko Context API-ja) — dodavanje/uklanjanje na kartici i stranici detalja, filter "samo omiljeni" u galeriji, brojač u navigaciji, sve sa čuvanjem u localStorage
 - Navigacija sa logom brenda, dugmetom "Usvoji Ljubimca" koje vodi do pregleda ljubimaca na Početnoj stranici (glatko skrolovanje na ciljanu sekciju)
+- Podaci o rasi ljubimca (temperament, životni vek, poreklo, slika) preuzeti uživo sa TheDogAPI/TheCatAPI na stranici detalja
 
 ## Status razvoja
 
@@ -58,7 +76,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - [x] Faza 5 — Detaljna stranica ljubimca
 - [x] Faza 6 — Forma za usvajanje i potvrda
 - [x] Faza 7 — Global state (Context API)
-- [ ] Faza 8 — Eksterni API-ji
+- [x] Faza 8 — Eksterni API-ji
 - [ ] Faza 9 — Dodatne stranice i funkcionalnosti
 - [ ] Faza 10 — Stilizacija i responzivnost
 - [ ] Faza 11 — Finalna provera i dokumentacija
