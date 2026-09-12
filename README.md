@@ -69,6 +69,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Registracija, prijava i profil korisnika (mock autentifikacija preko Context API-ja i localStorage, bez pravog servera)
 - Hero sekcija na Početnoj stranici u brend bojama, prema Figma dizajnu
 - Sekcija "Upoznajte naš rad" i reusable sekcija "Postavi pitanje" (kontakt forma sa čuvanjem poruka u localStorage i modalom potvrde) na Početnoj stranici
+- Hero sekcija na stranici O nama, prema Figma dizajnu
 
 ## Status razvoja
 
