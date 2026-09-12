@@ -70,6 +70,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Hero sekcija na Početnoj stranici u brend bojama, prema Figma dizajnu
 - Sekcija "Upoznajte naš rad" i reusable sekcija "Postavi pitanje" (kontakt forma sa čuvanjem poruka u localStorage i modalom potvrde) na Početnoj stranici
 - Hero sekcija na stranici O nama, prema Figma dizajnu
+- Sekcija "Naša priča" i "Postavi pitanje" (reusana komponenta) na stranici O nama
 
 ## Status razvoja
 
