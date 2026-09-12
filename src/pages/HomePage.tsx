@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import heroImage from '../assets/images/hero-pets.png'
+import AskQuestionSection from '../components/AskQuestionSection'
 import PetCard from '../components/PetCard'
 import { mockPets } from '../data/pets'
 
@@ -40,6 +41,20 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="py-5 bg-white">
+        <div className="container col-lg-8 text-center">
+          <h2 className="text-uppercase text-secondary fw-bold small mb-3">
+            Upoznajte naš rad
+          </h2>
+          <p className="fs-4 fw-semibold">
+            UsvojiMe je mesto gde ljubimci dobijaju drugu šansu, a ljudi pravog
+            prijatelja za celi život. Spajamo napuštene i nezbrinute životinje sa
+            toplim domovima, donoseći sigurnost, ljubav i poverenje na obe strane. Jer
+            svaki ljubimac zaslužuje svoj sretan dom.
+          </p>
+        </div>
+      </section>
+
       <div className="container py-5">
         <div id="neki-od-ljubimaca" style={{ scrollMarginTop: '90px' }}>
           <h2 className="h4 mb-3">Neki od ljubimaca</h2>
@@ -50,6 +65,8 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+      <AskQuestionSection />
     </div>
   )
 }

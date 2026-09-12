@@ -1,6 +1,6 @@
 interface FormFieldProps {
   id: string
-  label: string
+  label?: string
   type?: 'text' | 'email' | 'password' | 'textarea'
   value: string
   onChange: (value: string) => void
@@ -23,9 +23,11 @@ function FormField({
 
   return (
     <div className="mb-3">
-      <label htmlFor={id} className="form-label">
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} className="form-label">
+          {label}
+        </label>
+      )}
       {type === 'textarea' ? (
         <textarea
           id={id}
