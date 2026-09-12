@@ -4,6 +4,11 @@ import leoImg from '../assets/images/leo.png'
 import medoImg from '../assets/images/medo.png'
 import zucoImg from '../assets/images/zuco.png'
 import sapaImg from '../assets/images/šapa.png'
+import cicaImg from '../assets/images/cica.png'
+import mazaImg from '../assets/images/maza.png'
+import bucaImg from '../assets/images/buca.png'
+import soleImg from '../assets/images/sole.png'
+import micaImg from '../assets/images/mica.png'
 import type { Pet } from '../types/Pet'
 
 export const mockPets: Pet[] = [
@@ -98,7 +103,7 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Beograd',
     description: 'Cica je mazna mačka koja najviše voli da spava na suncu i prede u krilu.',
-    imageUrl: 'https://cataas.com/cat/2VgBUv9MaBwk5qnK?width=500&height=280',
+    imageUrl: cicaImg,
   },
   {
     id: 8,
@@ -111,7 +116,7 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Novi Sad',
     description: 'Maza je mirna i nezavisna, idealna za stan i mirnije domaćinstvo.',
-    imageUrl: 'https://cataas.com/cat/3B3hpEDNeHSVKii0?width=500&height=280',
+    imageUrl: mazaImg,
   },
   {
     id: 9,
@@ -124,7 +129,7 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Niš',
     description: 'Buca je igrivo mače puno energije, obožava igračke sa perjem.',
-    imageUrl: 'https://cataas.com/cat/3FCDHQs7BeXfx8eu?width=500&height=280',
+    imageUrl: bucaImg,
   },
   {
     id: 10,
@@ -137,7 +142,7 @@ export const mockPets: Pet[] = [
     size: 'srednji',
     location: 'Beograd',
     description: 'Sole je razgovorljiva i privržena mačka koja voli da prati vlasnika po kući.',
-    imageUrl: 'https://cataas.com/cat/04eEQhDfAL8l5nt3?width=500&height=280',
+    imageUrl: soleImg,
   },
   {
     id: 11,
@@ -150,6 +155,6 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Kragujevac',
     description: 'Mica je smirena starija dama u potrazi za mirnim domom.',
-    imageUrl: 'https://cataas.com/cat/3CIF7KHCotN8AYDG?width=500&height=280',
+    imageUrl: micaImg,
   },
 ]
