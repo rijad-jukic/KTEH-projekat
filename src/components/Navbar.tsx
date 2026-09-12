@@ -16,7 +16,7 @@ function Navbar() {
   }, [location.pathname])
 
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
           <img src={logo} alt="UsvojiMe" height={32} />
@@ -32,7 +32,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={`collapse navbar-collapse${isOpen ? ' show' : ''}`} id="glavni-meni">
-          <ul className="navbar-nav ms-auto align-items-md-center">
+          <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
               <NavLink className={navLinkClass} to="/" end>
                 Početna
@@ -61,7 +61,7 @@ function Navbar() {
                 ♥ {favoriteIds.length}
               </span>
             </li>
-            <li className="nav-item ms-md-3 mt-2 mt-md-0">
+            <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
               <Link to="/#neki-od-ljubimaca" className="btn btn-dark rounded-pill">
                 Usvoji Ljubimca
               </Link>

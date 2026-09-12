@@ -13,7 +13,7 @@ export const mockPets: Pet[] = [
     location: 'Beograd',
     description:
       'Hugo je miran i odan pas koji obožava duge šetnje i igru sa loptom. Odlično se slaže sa decom.',
-    imageUrl: 'https://loremflickr.com/500/280/dog?lock=101',
+    imageUrl: 'https://placedog.net/500/280?id=10',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const mockPets: Pet[] = [
     location: 'Novi Sad',
     description:
       'Laki je energičan i radoznao, uvek spreman za avanturu i novo društvo.',
-    imageUrl: 'https://loremflickr.com/500/280/dog?lock=102',
+    imageUrl: 'https://placedog.net/500/280?id=5',
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const mockPets: Pet[] = [
     size: 'srednji',
     location: 'Niš',
     description: 'Žućo je druželjubiv pas koji voli boravak u dvorištu i igru sa decom.',
-    imageUrl: 'https://loremflickr.com/500/280/dog?lock=103',
+    imageUrl: 'https://placedog.net/500/280?id=15',
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const mockPets: Pet[] = [
     size: 'veliki',
     location: 'Kragujevac',
     description: 'Medo je nežan div koji obožava pažnju i mirne porodične dane.',
-    imageUrl: 'https://loremflickr.com/500/280/dog?lock=104',
+    imageUrl: 'https://placedog.net/500/280?id=20',
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ export const mockPets: Pet[] = [
     size: 'srednji',
     location: 'Beograd',
     description: 'Šapa je štene puno energije, brzo uči i voli druženje sa drugim psima.',
-    imageUrl: 'https://loremflickr.com/500/280/dog?lock=105',
+    imageUrl: 'https://placedog.net/500/280?id=40',
   },
   {
     id: 6,
@@ -79,7 +79,7 @@ export const mockPets: Pet[] = [
     size: 'veliki',
     location: 'Subotica',
     description: 'Ovaj Hugo je pametan i vredan radnik, uvek željan mentalnih izazova.',
-    imageUrl: 'https://loremflickr.com/500/280/dog?lock=106',
+    imageUrl: 'https://placedog.net/500/280?id=1',
   },
   {
     id: 7,
@@ -92,7 +92,7 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Beograd',
     description: 'Cica je mazna mačka koja najviše voli da spava na suncu i prede u krilu.',
-    imageUrl: 'https://loremflickr.com/500/280/cat?lock=201',
+    imageUrl: 'https://cataas.com/cat/2VgBUv9MaBwk5qnK?width=500&height=280',
   },
   {
     id: 8,
@@ -105,7 +105,7 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Novi Sad',
     description: 'Maza je mirna i nezavisna, idealna za stan i mirnije domaćinstvo.',
-    imageUrl: 'https://loremflickr.com/500/280/cat?lock=202',
+    imageUrl: 'https://cataas.com/cat/3B3hpEDNeHSVKii0?width=500&height=280',
   },
   {
     id: 9,
@@ -118,7 +118,7 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Niš',
     description: 'Buca je igrivo mače puno energije, obožava igračke sa perjem.',
-    imageUrl: 'https://loremflickr.com/500/280/cat?lock=203',
+    imageUrl: 'https://cataas.com/cat/3FCDHQs7BeXfx8eu?width=500&height=280',
   },
   {
     id: 10,
@@ -131,7 +131,7 @@ export const mockPets: Pet[] = [
     size: 'srednji',
     location: 'Beograd',
     description: 'Sole je razgovorljiva i privržena mačka koja voli da prati vlasnika po kući.',
-    imageUrl: 'https://loremflickr.com/500/280/cat?lock=204',
+    imageUrl: 'https://cataas.com/cat/04eEQhDfAL8l5nt3?width=500&height=280',
   },
   {
     id: 11,
@@ -144,6 +144,6 @@ export const mockPets: Pet[] = [
     size: 'mali',
     location: 'Kragujevac',
     description: 'Ova Cica je smirena starija dama u potrazi za mirnim domom.',
-    imageUrl: 'https://loremflickr.com/500/280/cat?lock=205',
+    imageUrl: 'https://cataas.com/cat/3CIF7KHCotN8AYDG?width=500&height=280',
   },
 ]

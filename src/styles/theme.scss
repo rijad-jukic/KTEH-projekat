@@ -26,6 +26,20 @@ $navbar-light-active-color: $brand-green;
 
 @import 'bootstrap/scss/bootstrap';
 
+// Bootstrap-ova automatska provera kontrasta bira crn tekst za nasu
+// narandzastu (i za "active" stanje tamno zelene) - eksplicitno
+// zadrzavamo beo tekst na oba dugmeta u svim stanjima.
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-disabled-color: #fff;
+}
+
+.btn-dark {
+  --bs-btn-active-color: #fff;
+}
+
 // Dvobojna pozadina za Login/Register stranice (zelena gore, krem dole).
 .auth-split-bg {
   min-height: 70vh;

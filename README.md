@@ -71,6 +71,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Sekcija "Upoznajte naš rad" i reusable sekcija "Postavi pitanje" (kontakt forma sa čuvanjem poruka u localStorage i modalom potvrde) na Početnoj stranici
 - Hero sekcija na stranici O nama, prema Figma dizajnu
 - Sekcija "Naša priča" i "Postavi pitanje" (reusana komponenta) na stranici O nama
+- Responsive audit (mobilni/tablet/desktop) svih stranica — ispravljen kontrast teksta na narandžastim dugmićima i sažimanje navigacije na tablet širini; zamenjeni nepouzdani placeholder izvori slika ljubimaca pouzdanijim (placedog.net / cataas.com)
 
 ## Status razvoja
 
@@ -83,5 +84,5 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - [x] Faza 7 — Global state (Context API)
 - [x] Faza 8 — Eksterni API-ji
 - [x] Faza 9 — Dodatne stranice i funkcionalnosti
-- [ ] Faza 10 — Stilizacija i responzivnost
+- [x] Faza 10 — Stilizacija i responzivnost
 - [ ] Faza 11 — Finalna provera i dokumentacija
