@@ -71,7 +71,8 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Sekcija "Upoznajte naš rad" i reusable sekcija "Postavi pitanje" (kontakt forma sa čuvanjem poruka u localStorage i modalom potvrde) na Početnoj stranici
 - Hero sekcija na stranici O nama, prema Figma dizajnu
 - Sekcija "Naša priča" i "Postavi pitanje" (reusana komponenta) na stranici O nama
-- Responsive audit (mobilni/tablet/desktop) svih stranica — ispravljen kontrast teksta na narandžastim dugmićima i sažimanje navigacije na tablet širini; zamenjeni nepouzdani placeholder izvori slika ljubimaca pouzdanijim (placedog.net / cataas.com)
+- Responsive audit (mobilni/tablet/desktop) svih stranica — ispravljen kontrast teksta na narandžastim dugmićima i sažimanje navigacije na tablet širini
+- Slike pasa zamenjene sopstvenim fotografijama (`src/assets/images`); slike mačaka trenutno sa cataas.com
 
 ## Status razvoja
 

@@ -1,3 +1,9 @@
+import hugoImg from '../assets/images/hugo.png'
+import lakiImg from '../assets/images/laki.png'
+import leoImg from '../assets/images/leo.png'
+import medoImg from '../assets/images/medo.png'
+import zucoImg from '../assets/images/zuco.png'
+import sapaImg from '../assets/images/šapa.png'
 import type { Pet } from '../types/Pet'
 
 export const mockPets: Pet[] = [
@@ -13,7 +19,7 @@ export const mockPets: Pet[] = [
     location: 'Beograd',
     description:
       'Hugo je miran i odan pas koji obožava duge šetnje i igru sa loptom. Odlično se slaže sa decom.',
-    imageUrl: 'https://placedog.net/500/280?id=10',
+    imageUrl: hugoImg,
   },
   {
     id: 2,
@@ -27,7 +33,7 @@ export const mockPets: Pet[] = [
     location: 'Novi Sad',
     description:
       'Laki je energičan i radoznao, uvek spreman za avanturu i novo društvo.',
-    imageUrl: 'https://placedog.net/500/280?id=5',
+    imageUrl: lakiImg,
   },
   {
     id: 3,
@@ -40,7 +46,7 @@ export const mockPets: Pet[] = [
     size: 'srednji',
     location: 'Niš',
     description: 'Žućo je druželjubiv pas koji voli boravak u dvorištu i igru sa decom.',
-    imageUrl: 'https://placedog.net/500/280?id=15',
+    imageUrl: zucoImg,
   },
   {
     id: 4,
@@ -53,7 +59,7 @@ export const mockPets: Pet[] = [
     size: 'veliki',
     location: 'Kragujevac',
     description: 'Medo je nežan div koji obožava pažnju i mirne porodične dane.',
-    imageUrl: 'https://placedog.net/500/280?id=20',
+    imageUrl: medoImg,
   },
   {
     id: 5,
@@ -66,11 +72,11 @@ export const mockPets: Pet[] = [
     size: 'srednji',
     location: 'Beograd',
     description: 'Šapa je štene puno energije, brzo uči i voli druženje sa drugim psima.',
-    imageUrl: 'https://placedog.net/500/280?id=40',
+    imageUrl: sapaImg,
   },
   {
     id: 6,
-    name: 'Hugo',
+    name: 'Leo',
     species: 'pas',
     breed: 'Border kolija',
     breedApiQuery: 'Border Collie',
@@ -78,8 +84,8 @@ export const mockPets: Pet[] = [
     ageYears: 6,
     size: 'veliki',
     location: 'Subotica',
-    description: 'Ovaj Hugo je pametan i vredan radnik, uvek željan mentalnih izazova.',
-    imageUrl: 'https://placedog.net/500/280?id=1',
+    description: 'Leo je pametan i vredan radnik, uvek željan mentalnih izazova.',
+    imageUrl: leoImg,
   },
   {
     id: 7,
@@ -135,7 +141,7 @@ export const mockPets: Pet[] = [
   },
   {
     id: 11,
-    name: 'Cica',
+    name: 'Mica',
     species: 'macka',
     breed: 'Domaća kratkodlaka',
     breedApiQuery: 'Domestic Short Hair',
@@ -143,7 +149,7 @@ export const mockPets: Pet[] = [
     ageYears: 5,
     size: 'mali',
     location: 'Kragujevac',
-    description: 'Ova Cica je smirena starija dama u potrazi za mirnim domom.',
+    description: 'Mica je smirena starija dama u potrazi za mirnim domom.',
     imageUrl: 'https://cataas.com/cat/3CIF7KHCotN8AYDG?width=500&height=280',
   },
 ]
