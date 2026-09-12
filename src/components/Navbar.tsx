@@ -49,6 +49,11 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className={navLinkClass} to="/profil">
+                Profil
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <span
                 className="nav-link"
                 aria-label={`${favoriteIds.length} omiljenih ljubimaca`}

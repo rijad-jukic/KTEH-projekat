@@ -25,3 +25,19 @@ $navbar-light-hover-color: $brand-orange;
 $navbar-light-active-color: $brand-green;
 
 @import 'bootstrap/scss/bootstrap';
+
+// Dvobojna pozadina za Login/Register stranice (zelena gore, krem dole).
+.auth-split-bg {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(
+    to bottom,
+    $brand-green 0%,
+    $brand-green 42%,
+    $brand-cream 42%,
+    $brand-cream 100%
+  );
+}

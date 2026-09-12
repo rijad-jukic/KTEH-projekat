@@ -66,6 +66,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Omiljeni ljubimci (globalno stanje preko Context API-ja) — dodavanje/uklanjanje na kartici i stranici detalja, filter "samo omiljeni" u galeriji, brojač u navigaciji, sve sa čuvanjem u localStorage
 - Navigacija sa logom brenda, dugmetom "Usvoji Ljubimca" koje vodi do pregleda ljubimaca na Početnoj stranici (glatko skrolovanje na ciljanu sekciju)
 - Podaci o rasi ljubimca (temperament, životni vek, poreklo, slika) preuzeti uživo sa TheDogAPI/TheCatAPI na stranici detalja
+- Registracija, prijava i profil korisnika (mock autentifikacija preko Context API-ja i localStorage, bez pravog servera)
 
 ## Status razvoja
 
@@ -77,6 +78,6 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - [x] Faza 6 — Forma za usvajanje i potvrda
 - [x] Faza 7 — Global state (Context API)
 - [x] Faza 8 — Eksterni API-ji
-- [ ] Faza 9 — Dodatne stranice i funkcionalnosti
+- [x] Faza 9 — Dodatne stranice i funkcionalnosti
 - [ ] Faza 10 — Stilizacija i responzivnost
 - [ ] Faza 11 — Finalna provera i dokumentacija
