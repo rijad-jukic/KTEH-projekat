@@ -67,6 +67,7 @@ _Ova sekcija se dopunjava kroz faze razvoja projekta._
 - Navigacija sa logom brenda, dugmetom "Usvoji Ljubimca" koje vodi do pregleda ljubimaca na Početnoj stranici (glatko skrolovanje na ciljanu sekciju)
 - Podaci o rasi ljubimca (temperament, životni vek, poreklo, slika) preuzeti uživo sa TheDogAPI/TheCatAPI na stranici detalja
 - Registracija, prijava i profil korisnika (mock autentifikacija preko Context API-ja i localStorage, bez pravog servera)
+- Hero sekcija na Početnoj stranici u brend bojama, prema Figma dizajnu
 
 ## Status razvoja
 

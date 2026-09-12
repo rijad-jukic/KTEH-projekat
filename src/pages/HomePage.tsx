@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import heroImage from '../assets/images/hero-pets.png'
 import PetCard from '../components/PetCard'
 import { mockPets } from '../data/pets'
 
@@ -6,24 +7,47 @@ const featuredPets = mockPets.slice(0, 4)
 
 function HomePage() {
   return (
-    <div className="container py-5">
-      <div className="text-center mb-5">
-        <h1 className="display-5 fw-bold">Pronađi svog novog najboljeg druga</h1>
-        <p className="lead text-secondary col-lg-8 mx-auto">
-          Pregledaj ljubimce koji čekaju usvajanje, filtriraj ih po vrsti,
-          veličini i polu, i pošalji upit za onog koji ti legne za oko.
-        </p>
-        <Link to="/ljubimci" className="btn btn-primary btn-lg rounded-pill mt-3">
-          Pogledaj galeriju ljubimaca
-        </Link>
-      </div>
+    <div>
+      <section className="bg-dark text-white">
+        <div className="container py-5">
+          <div className="row align-items-center g-4">
+            <div className="col-lg-6">
+              <h1 className="display-5 fw-bold mb-3">
+                Pronađi svog novog <span className="text-primary">najboljeg</span> prijatelja
+              </h1>
+              <p className="mb-4 opacity-75">
+                Usvoji ljubimca danas i pruži mu siguran, srećan i topao dom ispunjen
+                ljubavlju, pažnjom i brigom!
+              </p>
+              <div className="d-flex flex-wrap gap-3">
+                <Link to="/ljubimci" className="btn btn-primary rounded-pill px-4">
+                  Galerija ljubimaca
+                </Link>
+                <Link to="/o-nama" className="btn btn-outline-light rounded-pill px-4">
+                  O nama
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-6 text-center">
+              <img
+                src={heroImage}
+                alt="Mačka i fenek lisica"
+                className="img-fluid"
+                style={{ maxHeight: 320 }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div id="neki-od-ljubimaca" style={{ scrollMarginTop: '90px' }}>
-        <h2 className="h4 mb-3">Neki od ljubimaca</h2>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-          {featuredPets.map((pet) => (
-            <PetCard key={pet.id} pet={pet} />
-          ))}
+      <div className="container py-5">
+        <div id="neki-od-ljubimaca" style={{ scrollMarginTop: '90px' }}>
+          <h2 className="h4 mb-3">Neki od ljubimaca</h2>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            {featuredPets.map((pet) => (
+              <PetCard key={pet.id} pet={pet} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
